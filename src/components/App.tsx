@@ -54,7 +54,7 @@ const App: React.FC = () => {
           ) : (
             <div className="mt-10">
               <h1 className="text-center text-2xl sm:text-3xl mb-8">
-                Welcome to Demapp Assignment
+                Welcome to MyTrip
               </h1>
               <StyledFirebaseAuth
                 uiConfig={uiConfig}

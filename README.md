@@ -6,6 +6,7 @@ https://stripe.com/docs/testing
 Main technologies used for the project:
 
 - React JS
+- TypeScript
 - Redux
 - React Router
 - Hooks

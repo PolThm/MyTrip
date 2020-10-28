@@ -20,7 +20,7 @@ const Home: React.FC = () => {
   const { departure, arrival, distance, price, tripList } = useSelector<
     RootState,
     IState
-  >((state) => ({
+    >((state) => ({
     departure: state.trip.departure,
     arrival: state.trip.arrival,
     distance: state.trip.distance,
@@ -31,6 +31,7 @@ const Home: React.FC = () => {
   const [resultDisplayed, setResultDisplayed] = useState<boolean>(false);
   const [resultErrorDisplayed, setResultErrorDisplayed] = useState(false);
   const [formErrorDisplayed, setFormErrorDisplayed] = useState<boolean>(false);
+  const [fakeCardDisplayed, setFakeCardDisplayed] = useState<boolean>(false)
 
   const onSubmit: FormEventHandler = (e) => {
     e.preventDefault();
@@ -91,6 +92,50 @@ const Home: React.FC = () => {
     }
   };
 
+  let fakeCard;
+  if (!fakeCardDisplayed) {
+    fakeCard = (
+      <div className="text-center ">
+        <p
+          className="smiley cursor-pointer"
+          onClick={() => setFakeCardDisplayed(true)}
+        >
+          &#128521;
+        </p>
+        <p>Click me to get a fake card!</p>
+      </div>
+    );
+  } else {
+    fakeCard = (
+      <div className="text-center border border-gray-400 p-3 rounded shadow-md">
+        <div className="flex justify-between items-center py-2 mx-4 border-b border-gray-400">
+          <p className="text-green-600">Number</p>
+          <span className="px-2 ml-2 rounded-lg sm:rounded-full bg-green-500 text-white">
+          4242 4242 4242 4242
+          </span>
+        </div>
+        <div className="flex justify-between items-center py-2 mx-4 border-b border-gray-400">
+          <p className="text-green-600">CVC</p>
+          <span className="px-2 ml-2 rounded-lg sm:rounded-full bg-green-500 text-white">
+          any 3 digits
+          </span>
+        </div>
+        <div className="flex justify-between items-center py-2 mx-4 mb-4 border-b border-gray-400">
+          <p className="text-green-600">Date</p>
+          <span className="px-2 ml-2 rounded-lg sm:rounded-full bg-green-500 text-white">
+          any future date
+          </span>
+        </div>
+        <span
+          className="smiley cursor-pointer"
+          onClick={() => setFakeCardDisplayed(false)}
+        >
+          &#128521;
+        </span>
+      </div>
+    );
+  }
+
   let result;
   if (!distance) {
     result = (
@@ -123,6 +168,9 @@ const Home: React.FC = () => {
           billingAddress
           shippingAddress
         />
+        <div className="my-8">
+          {fakeCard}
+        </div>
       </div>
     );
   }

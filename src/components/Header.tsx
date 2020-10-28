@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <header className="py-4 flex justify-between">
       <h2 className="mt-3 text-2xl text-green-600">
-        Demapp Assignement
+        MyTrip
         <span className="block text-2xl text-gray-700">by Pol Thomas</span>
       </h2>
       <nav>
