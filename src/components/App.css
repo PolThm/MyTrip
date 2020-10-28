@@ -1,0 +1,56 @@
+* {
+  font-family: Montserrat, sans-serif;
+  color: #333;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.core {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 768px;
+}
+
+li,
+button,
+span {
+  transition: all 200ms ease-in-out;
+}
+
+.StripeCheckout {
+  margin-top: 2.5rem;
+  width: 100%;
+  box-shadow: none !important;
+  background: white !important;
+}
+.StripeCheckout span {
+  text-transform: uppercase;
+  border-radius: 0.25rem !important;
+  border: 1px #48bb78 solid !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06) !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 3.7rem !important;
+  font-size: 1.25rem !important;
+  color: #48bb78 !important;
+  background: white !important;
+  font-family: Montserrat, sans-serif !important;
+  font-weight: normal !important;
+  letter-spacing: 0.1em;
+}
+.StripeCheckout span:hover {
+  background: #48bb78 !important;
+  color: white !important;
+}
+
+.firebaseui-idp-button {
+  max-width: 225px !important;
+}
+
+/*# sourceMappingURL=App.css.map */
