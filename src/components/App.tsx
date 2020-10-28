@@ -53,7 +53,7 @@ const App: React.FC = () => {
             </div>
           ) : (
             <div className="mt-10">
-              <h1 className="text-center text-2xl sm:text-3xl mb-8">
+              <h1 className="text-center text-2xl sm:text-3xl mb-24">
                 Welcome to MyTrip
               </h1>
               <StyledFirebaseAuth
