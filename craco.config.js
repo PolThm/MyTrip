@@ -12,7 +12,8 @@ module.exports = {
             "./src/**/*.ts",
             "./src/**/*.jsx",
             "./src/**/*.js",
-            "./public/index.html",
+            './src/**/*.css',
+            "./public/index.html"
           ],
           defaultExtractor: (content) =>
             content.match(/[A-Za-z0-9-_:/]+/g) || [],
