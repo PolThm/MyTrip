@@ -4,7 +4,13 @@ module.exports = {
     "./src/**/*.ts",
     "./src/**/*.jsx",
     "./src/**/*.js",
-    "./public/index.html",
+    './src/**/*.css',
+    "./node_modules/**/*.tsx",
+    "./node_modules/**/*.ts",
+    "./node_modules/**/*.jsx",
+    "./node_modules/**/*.js",
+    './node_modules/**/*.css',
+    "./public/index.html"
   ],
   theme: {
     extend: {},
