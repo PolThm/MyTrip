@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea
+src/tailwind.css
+src\tailwind.css
+C:\Users\polth\OneDrive\Documents\Github\my_trip\MyTrip\src\tailwind.css

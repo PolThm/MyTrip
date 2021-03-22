@@ -1,5 +1,7 @@
 import React from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
+import logoGoogle from '../img/powered_by_google.png';
+import {log} from "util";
 
 interface Input {
   updateInputAddress: (evt: any) => void;
@@ -22,7 +24,7 @@ function InputAutocomplete(props: Input) {
         onChange={handleSelect}
         onSelect={handleSelect}
       >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+        {({getInputProps, suggestions, getSuggestionItemProps, loading}) => (
           <div className="mt-6">
             <label className="text-green-500">{props.label}</label>
             <input
@@ -34,7 +36,6 @@ function InputAutocomplete(props: Input) {
 
             <div>
               {loading ? <div>...loading</div> : null}
-
               {suggestions.map((suggestion) => {
                 const style = {
                   backgroundColor: suggestion.active ? "#c6f6d5" : "#fff",
@@ -42,13 +43,17 @@ function InputAutocomplete(props: Input) {
 
                 return (
                   <div
-                    {...getSuggestionItemProps(suggestion, { style })}
+                    {...getSuggestionItemProps(suggestion, {style})}
                     key={suggestion.placeId}
                   >
                     {suggestion.description}
                   </div>
                 );
               })}
+              {suggestions.length > 0 &&
+              <div className="mt-1 w-full flex justify-end">
+                <img src={logoGoogle} className="w-40"/>
+              </div>}
             </div>
           </div>
         )}
@@ -56,4 +61,5 @@ function InputAutocomplete(props: Input) {
     </div>
   );
 }
+
 export default InputAutocomplete;
