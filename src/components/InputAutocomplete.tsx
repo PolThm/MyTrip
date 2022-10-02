@@ -1,7 +1,6 @@
 import React from "react";
 import PlacesAutocomplete from "react-places-autocomplete";
 import logoGoogle from '../img/powered_by_google.png';
-import {log} from "util";
 
 interface Input {
   updateInputAddress: (evt: any) => void;
@@ -52,7 +51,7 @@ function InputAutocomplete(props: Input) {
               })}
               {suggestions.length > 0 &&
               <div className="mt-1 w-full flex justify-end">
-                <img src={logoGoogle} className="w-40"/>
+                <img src={logoGoogle} alt="google logo" className="w-40"/>
               </div>}
             </div>
           </div>
